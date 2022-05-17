@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14, 15, 16]
-        package: ["${{ github.repository }}", "github:${{ github.repository }}", "https://github.com/${{ github.repository }}"]
+        package: ["${{ github.repository }}", "github:${{ github.repository }}", "https://github.com/${{ github.repository }}", "git+https://github.com/${{ github.repository }}"]
 
     steps:
       - uses: actions/setup-node@v3
