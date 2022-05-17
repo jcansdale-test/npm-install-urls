@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: npm i https://githuib.com/${{ github.repository }}
+      - run: npm i github:${{ github.repository }}
