@@ -18,6 +18,8 @@ jobs:
 
       - run: npm version
 
+      - run: npm init -y
+
       - run: npm i ${{ matrix.package }} --save
 
       - run: cat package.json
