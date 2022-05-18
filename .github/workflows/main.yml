@@ -13,11 +13,15 @@ jobs:
         package: ["${{ github.repository }}", "github:${{ github.repository }}", "https://github.com/${{ github.repository }}", "git+https://github.com/${{ github.repository }}", "git://github.com/${{ github.repository }}", "git+ssh://git@github.com/${{ github.repository }}"]
 
     steps:
+      - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
       - run: npm version
+
+      - run: rm package.json
 
       - run: npm init -y
 
