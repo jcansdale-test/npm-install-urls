@@ -28,6 +28,8 @@ jobs:
 
       - run: npm init -y
 
+      - run: git config --global url."https://${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
+
       - run: npm i ${{ matrix.package }} --save
 
       - run: cat package.json
