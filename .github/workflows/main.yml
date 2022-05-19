@@ -28,9 +28,9 @@ jobs:
 
       - run: npm init -y
       
-      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
+      # - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
 
-      # - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf git://github.com/
+      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf git://github.com/
 
       - run: npm i ${{ matrix.package }} --save
 
